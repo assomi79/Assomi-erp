@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASSOMi — ERP Supermarché simple (Côte d'Ivoire • FCFA)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">🛒</div><div><h1>ASSOMi</h1><small>ERP supermarché simple • TVA A/B/E • FCFA</small></div></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">💾 Local • F9 = encaisser<br>HT = TTC/(1+taux) • BL → Réserve → Rayon<br>Actions tracées par agent 🔑</div>
+  </aside>
+  <div class="main">
+    <div class="topbar">
+      <div><h2 id="modTitle">Tableau de bord</h2><div class="sub" id="modSub"></div></div>
+      <div class="top-actions no-print">
+        <span id="syncBadge" title="État de la synchro multi-postes"></span>
+        <span id="ptBadge" title="Mon pointage"></span>
+        <span id="userBadge"></span>
+        <button class="btn btn-g btn-s" onclick="go('pos')">🛒 Caisse</button>
+        <button class="btn btn-g btn-s" onclick="go('dashboard')">📊 Pilotage</button>
+      </div>
+    </div>
+    <nav class="mobilenav no-print" id="mnav"></nav>
+    <div class="content" id="view"></div>
+  </div>
+</div>
+<div id="printZone" style="display:none"></div>
+<div class="modal-bg" id="modalBg"><div class="modal" id="modalBox"></div></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
